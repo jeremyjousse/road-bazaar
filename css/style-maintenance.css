@@ -1,0 +1,438 @@
+@charset "utf-8";
+@import url('../fonts/webfontkit-20101004-041241/stylesheet.css');
+@import url('../fonts/museo/stylesheet.css');
+@import url('../fonts/webfontkit-20110914-061746/stylesheet.css');
+
+* { margin:0; }
+html,
+body {width:100%;margin:0;padding:0;background-image:url(../images/back.gif);}
+a img { border:none; }
+img{border:none;image-rendering: auto;-ms-interpolation-mode: nearest-neighbor;}
+#bg table,
+#bg td { height:100%; overflow:hidden; width:100%; z-index:1; }
+/* GLOBAL UNITIZ */
+sup{color:#DE87D1;}
+input,
+select,
+textarea{background:#FFF url('../imgs/bg-input.png') repeat-x bottom;border:1px solid #C5CDDA;}
+input,
+select{height:24px;}
+textarea{padding:6px;}
+input,
+option{padding:0 6px;}
+select{padding:0 0 0 6px;}
+input[type=submit],
+a.submit{padding:5px 10px;color:#FFF;font:normal 600 0.95em/1 Arial,Verdana;cursor:pointer;background:#5C2B4E;border:none;border-radius:8px;-moz-border-radius:8px;-webkit-border-radius:8px;-moz-box-shadow:0px 1px 3px #21151a;-webkit-box-shadow:0px 1px 3px #21151a;box-shadow:0px 1px 3px #21151a;}
+a.submit{line-height:2;}
+input[type=submit]:hover,
+a.submit:hover{background-color:#11b8d0;}
+input[type=button],
+a.button{padding:5px 10px;color:#FFF;font:normal 600 0.95em/1 Arial,Verdana;cursor:pointer;background:#5C2B4E;border:none;border-radius:8px;-moz-border-radius:8px;-webkit-border-radius:8px;-moz-box-shadow:0px 1px 3px #21151a;-webkit-box-shadow:0px 1px 3px #21151a;box-shadow:0px 1px 3px #21151a;}
+a.button{line-height:2;}
+input[type=button]:hover,
+a.button:hover{background-color:#11b8d0;}
+
+a.button:hover{border-bottom:1px solid #fff;moz-box-shadow:0px 1px 2px #787878;-webkit-box-shadow:0px 1px 2px #787878;box-shadow:0px 1px 2px #787878;}
+label{padding-top:2px;line-height:24px;}
+.left{float:left;}
+.right{float:right;}
+.both{float:none !important;clear:both;}
+br.both{margin: 6px 0;}
+.none{display:none;}
+.error{color:#DE87D1;}
+input.error,
+textarea.error,
+select.error{background:#FFEEEE;border-color:#FF9999;}
+/* BACKGROUND */
+#bg div { height:200%; left:0; position:absolute; top:0; width:200%; }
+#bg img { margin:0 auto; min-height:50%; min-width:50%; }
+#bg td { text-align:left; vertical-align:top; }
+.ac_overlay{	
+	width:100%;
+	height:100%;
+	position:fixed;
+	top:0px;
+	left:0px;
+	background:transparent url(http://www.road-bazaar.com/images/pattern.png) repeat top left;
+}
+/* ELEMENTI PAGINA */
+#menu { float:left; display:block; /* height:124px; */ /* position:absolute; left:-1500px; top:20%; */width: 620px;margin: 0 0 0 72px; }
+#logo { float:left; width:auto; /* height:380px; */ margin-bottom:4px; background-color:#010118;/*  position:relative; */text-align:center; }
+/* #logo:hover { background-color:#FFF;}
+#logo:hover h1, #logo:hover h2{ color:#000;} */
+#menuInt { width:1015px; height:56px; background-color:#000; position:relative; }
+.bio { height:600px; }
+.scroller { width:1160px; height:750px; position:relative; padding-right:20px; }
+.scroller-1 { width:500px; height:336px; position:relative; padding-right:20px; }
+.scroller-2 { width:560px; height:200px; position:relative; padding-right:20px; }
+.scroller-3 { width:560px; height:180px; position:relative; padding-right:20px; }
+.scroller-4 { width:600px; height:600px; position:relative; padding-right:20px; }
+.scroller-5 { width:800px; height:500px; position:relative; padding-right:20px; }
+#panel-1,
+#panel-2,
+#panel-3,
+#panel-4,
+#panel-5,
+#panel-6,
+#panel-7,
+#panel-8,
+#panel-9,
+#panel-10,
+#panel-11 ,
+#panel-12 { width:100%; height:100%; color:#fff; padding-left:20px; position:absolute; background-image:url(../images/blank.png); top:-100%; overflow:hidden; }
+#panel-12, #panel-11  { background:#FFF;filter:alpha(opacity=95);-moz-opacity:0.95;-khtml-opacity: 0.95;opacity: 0.95; }
+#footer { width:100%; height:145px; color:#fff; padding-left:20px; position:absolute; background-image:url(../images/blank.png); bottom:-95px; overflow:hidden; z-index: 10;}
+#footer ul { list-style-type:none; }
+#footer ul li {display:table-cell;}
+#footer #toprecheche ul {padding:0;}
+#footer #toprecheche ul li {display:block;}
+
+#fleche_blc { position:absolute; top:-12px; left:-560px; width:562px; }
+#fleche_blc img { margin-left:1px; }
+
+/* */ #panelInt-1,
+#panelInt-2,
+#panelInt-3,
+#panelInt-4,
+#panelInt-5,
+#panelInt-6,
+#panelInt-7,
+#panelInt-8,
+#panelInt-9,
+#panelInt-10,
+#panelInt-11,
+#panelInt-12 { display:block; width:1160px; height:750px; position:absolute; left:50%; top:50%; margin:-360px 0 0 -600px;/* border:1px solid grey; */  }
+.chiudi { float:right; position:absolute; top:10px; right:30px; }
+/* #credits { position:absolute; bottom:-30px; right:0; }
+#credits a {margin: 0px 20px 0px 0px;color:#FFFFFF } */
+#design_fleche {/*  position:absolute; top:-498px; right:0; height:498px; float:right;*/  }
+#design_fleche img { margin-top:100px; }
+#lang { /* margin-top:21px; margin-right:18px; float:right; */ position:absolute; top:20px; right:18px; }
+.year { width:240px; float:left; }
+.year ul { list-style:none; margin:0; padding:0; }
+#cv { margin:15px 0; }
+#cv img { margin-right:8px; }
+/* MENU */
+#menuInt ul { list-style-type:none; margin-left:8px; padding:0; padding:3px 0; }
+#menuInt li{ display:inline; font-family:'HelveticaNeueMediumCond', Times, serif; font-size:19px; text-transform:uppercase; margin:10px 0; padding:10px 0; }
+#menuInt li a{ color:#fff; text-decoration:none; font-style:normal; margin:0 6px; }
+#menuInt li a:hover{ color:#a33d8c; }
+/* TESTO */
+/* h2{font-family:'HelveticaNeueMediumCond',Times,serif;font-size:26px;color:#a33d8c;font-weight:normal;margin-bottom:30px;text-transform:uppercase;}
+ */p { font-family:'HelveticaNeueMediumCond',HelveticaLightRegular; font-size:20px; color:#FFF;padding:5px 0 5px 0;}
+h1,div.h1,
+h2,div.h2,
+h3,div.h3,
+h4,div.h4,
+h5,div.h5,
+h6,div.h6,
+h6.h7,div.h7{font-family:'HelveticaNeueMediumCond',Arial,Times,serif;font-size:18px;color:#FFF;font-weight:normal;line-height:28px;padding:6px 0;text-transform:uppercase;}
+/* h2 span, div.h2 span { color:#999; font-size:14px; } */
+a { color:#FFF; text-decoration:none;font-family: "HelveticaNeueMediumCond",Arial,Times,serif;text-transform: uppercase;}
+a:hover { color:#f36e28; }
+.v { font-size:13px; }
+/* GALLERY */
+.gallery ul { display:inline; list-style-type:none; padding:0; }
+.gallery ul li { display:inline; margin-right:8px; }
+.galImg { width:80px; height:80px; margin:0px 0 0 0; border:3px solid #FFF;}
+.galImg:hover { border:3px solid #a33d8c; }
+.galImg-ti { width:40px; height:40px; margin:0px 0 0 0; border:2px solid #FFF;}
+.galImg-ti:hover { border:2px solid #a33d8c; }
+.galVideo { width:150px; height:150px; margin:10px 0 0 0; float:left; }
+/* SCROLLBAR */
+.scrollbar-pane { margin-right:30px; }
+.scrollbar-handle-container { background:url(../images/blank.png); width:10px; }
+.scrollbar-handle { width:10px; background:#a33d8c; }
+.scrollbar-handle:hover { background:#666; }
+.scrollbar-handle.move { background:#666; }
+.erreur  {background:#FFF url('../imgs/bg-input-erreur.png') repeat-x bottom;border:1px solid #C5CDDA;}
+.erreur_textarea  {background:#FFF url('../imgs/bg-textarea-erreur.png') repeat-x bottom;border:1px solid #C5CDDA;}
+
+li {font-family: Arial, Times, serif;font-size: 11px;color: #999;font-weight: normal;line-height: 16px;}
+
+/* CHAMBRE */
+.bloc_chambre { cursor:pointer;width:100%;height:200px;}
+.h3_text { padding:0 0;color:#a33d8c;}
+.bloc_chambre:hover .text { color:#a33d8c;background-color:#fff;}
+.p_text { color:#FFF;font-size:12px;margin-top:6px;}
+.bloc_chambre:hover .p_text { color:#000;}
+.bloc_chambre:hover .h3_text { color:#000;}
+
+.chambre_1 { width:200px;height:200px;background:url(http://www.road-bazaar.com/images/room_hotel_up_lille_1.jpg) no-repeat top left;border-right:5px solid #a33d8c;} 
+.bloc_chambre:hover .chambre_1 { background:url(http://www.road-bazaar.com/images/room_hotel_up_lille_1_over.jpg) no-repeat top left;}
+.text { width:365px;height:180px;padding:10px 15px;font-family: Arial, Times, serif;font-size: 12px;color: #fff;font-weight: normal;line-height: 20px;}
+.chambre_2 { width:200px;height:200px;background:url(http://www.road-bazaar.com/images/room_hotel_up_lille_2.jpg) no-repeat top left;border-right:5px solid #a33d8c;}
+.bloc_chambre:hover .chambre_2 { background:url(http://www.road-bazaar.com/images/room_hotel_up_lille_2_over.jpg) no-repeat top left;}
+.chambre_3{ width:200px;height:200px;background:url(http://www.road-bazaar.com/images/room_hotel_up_lille_3.jpg) no-repeat top left;border-right:5px solid #a33d8c;}
+.bloc_chambre:hover .chambre_3 { background:url(http://www.road-bazaar.com/images/room_hotel_up_lille_3_over.jpg) no-repeat top left;}
+/* BOUTON */
+.bt_reserver { float:right;background-color:#000;padding: 0px 15px 40px 15px;height: 0px;width:170px;margin:-143px 0 0 0;}
+.bt_reserver:hover { float:right;background-color:#FFF;padding: 0px 15px 40px 15px;height: 0px;}
+.bt_lien_actu { float:right;background-color:#a33d8c;padding: 0px 15px 40px 15px;height: 0px;width:66px;margin:12px 12px 0 0;}
+.bt_lien_actu:hover { float:right;background-color:#000;padding: 0px 15px 40px 15px;height: 0px;}
+.bt_reserver:hover h4{ color:#000;}
+/* tripadvisor */
+.tripadvisor {margin-bottom:-4px;}
+/* facebook */
+.facebook {margin-bottom:-8px;}
+
+
+/* FORMULAIRE RESA RAPIDE */
+#reverv_rapide {
+	padding: 1px 0 0 15px;
+	width:1000px;
+	background-color: #a33d8c;
+	font-size:12px;
+	color:#000;
+	font-family:arial;
+	text-transform:uppercase;
+	/* margin: 0 0 1px 0; */
+	border-bottom:1px solid #a33d8c;
+}
+
+#reverv_rapide input,
+#reverv_rapide select {
+	font-size: 11px;
+	padding:2px;
+}
+
+#reverv_rapide h2,
+#reverv_rapide div.h2 {
+	padding: 0 0 6px 0;
+	color:#5c0750;
+	border-bottom: 1px solid #cca9c5;
+}
+
+#reverv_rapide a.bt_reserv {
+	background-color: #000;
+	border:1px solid #a33d8c;	
+	color:#a33d8c;
+	padding: 3px 6px;
+}
+
+#reverv_rapide a.bt_reserv:hover {
+	background-color:#FFF;
+	border:1px solid #a33d8c;
+	color:#000;
+	/* font-weight:bold; */
+	padding: 3px 6px;
+	text-decoration:none;
+}
+
+#reverv_rapide a.modif_reserv {
+	color:#8F658A;
+	text-decoration:underline;
+}
+
+#reverv_rapide a.modif_reserv:hover {
+	text-decoration:none;
+}
+
+/* Easy Slider */
+
+	#slider,#slider_actu{}	
+	#slider ul, #slider li,
+	#slider_actu ul, #slider_actu li {
+		margin:0;
+		padding:0;
+		list-style:none;
+		}
+	#slider li { 
+		width:1160px;
+		height:258px;
+		overflow:hidden; 
+		background:#a33d8c;
+		}
+	#slider_actu li{ 
+		width:1160px;
+		height:258px;
+		overflow:hidden; 
+		background:#FFF;
+		}		
+		
+	#slider li div.h2 { 
+		margin:0 20px;
+		padding-top:20px;
+		}	
+	#slider_actu li div.h2{ 
+		margin:0 20px;
+		padding-top:20px;
+		color:#a33d8c;
+		}		
+	#slider li p { 
+		margin:20px;
+		color:#FFF;
+		font-family: 'HelveticaLightRegular',arial,verdana;
+		text-transform:uppercase;
+		width:504px;
+		/* height:85px; */
+		}
+	 #slider_actu li p { 
+		margin:20px;
+		color:#000;
+		font-family: 'HelveticaLightRegular',arial,verdana;
+		text-transform:uppercase;
+		width:776px;
+		height:80px;
+		font-size:12px;
+		}
+	#slider li p a { 
+		color:#FFF;
+		text-decoration:underline;
+		}
+	#slider_actu li p a { 
+		color:#000;
+		text-decoration:underline;
+		}		
+	p#controls, p#controls2{
+		margin:0;
+		position:relative;
+		} 
+	
+
+	span#prevBtn{ font-family: 'HelveticaNeueMediumCond',arial,verdana;font-size:23px;}
+	span#nextBtn{ font-family: 'HelveticaNeueMediumCond',arial,verdana;font-size:23px;}	
+	span#firstBtn{ font-family: 'HelveticaNeueMediumCond',arial,verdana;font-size:23px;margin-right:20px;}	
+	span#lastBtn{ font-family: 'HelveticaNeueMediumCond',arial,verdana;font-size:23px;margin-left:20px;}	
+	
+
+/* // Easy Slider */
+
+/* // Animation image */
+#anim_hotel {float:right;width:500px;cursor:pointer;}
+#anim_hotel div {float:left;width:125px;height:250px;position:relative;}
+#anim_services {float:right;width:500px;cursor:pointer;}
+#anim_services div {float:left;width:125px;height:250px;position:relative;}
+#anim_tulipbar {float:right;width:500px;cursor:pointer;}
+#anim_tulipbar div {float:left;width:125px;height:250px;position:relative;}
+#anim_lille {float:right;width:500px;cursor:pointer;}
+#anim_lille div {float:left;width:125px;height:250px;position:relative;}
+
+
+
+/* ACCORDEON - CHAMBres */
+
+/* Vertical Accordion Style */
+.va-container{
+	position:relative;
+	margin:40px auto 0 auto;
+}
+.va-wrapper{
+	width:100%;
+	height:100%;
+	position:relative;
+	overflow:hidden;
+	background:#000;
+}
+.va-slice{
+	cursor:pointer;
+	position:absolute;
+	width:100%;
+	left:0px;
+	overflow:hidden;
+}
+.va-slice-1{
+	background:#000 url(http://www.road-bazaar.com/images/rub_chambre_double.jpg) no-repeat center center;
+}
+.va-slice-2{
+	background:#000 url(http://www.road-bazaar.com/images/rub_chambre_triple.jpg) no-repeat center center;
+}
+.va-slice-3{
+	background:#000 url(http://www.road-bazaar.com/images/rub_chambre_superieur.jpg) no-repeat center center;
+}
+.va-slice-color-1{
+	background-color:#97c5eb;
+}
+.va-slice-color-2{
+	background-color:#68ace5;
+}
+.va-slice-color-3{
+	background-color:#0072cf;
+}
+.va-title{
+	font-family: 'Open Sans Condensed', sans-serif;
+	text-transform:uppercase;
+	font-size:60px;
+	margin-left:20px;
+	color:#fff;
+
+}
+.va-title{
+line-height:110px !important;
+}
+.va-title:hover{
+	color:#000;
+}
+.va-content{
+	display:none;
+	margin-left:25px;
+}
+.va-content p{
+	background-color:#FFF;
+	color:#000;
+	width:350px;
+	padding:6px 6px;
+	text-align:left;
+}
+.va-slice p{
+	font-size: 22px;
+	font-style: italic;
+	font-family:Georgia, serif;
+}
+.va-slice ul{
+	margin-top:20px;
+}
+.va-slice ul li{
+	float:left;
+	margin:0px 2px;
+}
+
+.va-slice ul li a:hover{
+	background:#000;
+	color:#fff;
+	text-shadow:none;
+}
+.va-nav span{
+	width:40px;
+	height:25px;
+	background:transparent url(../images/prev.png) no-repeat center center;
+	position:absolute;
+	top:-35px;
+	left:50%;
+	margin-left:-20px;
+	text-indent:-9000px;
+	opacity:0.7;
+	cursor:pointer;
+	display:none;
+	z-index:100;
+}
+.va-nav span.va-nav-next{
+	background-image:url(../images/next.png);
+	top:auto;
+	bottom:-35px;
+}
+.va-nav span:hover{
+	opacity:1.0;
+}
+
+.chambre-text {
+font-family:arial,HelveticaLightRegular,helvetica;font-size:11px;float:left;
+padding:15px;background:url(http://www.road-bazaar.com/imgs/bg_violet_opacity.png) repeat top left;color:#FFF;position:absolute;text-align:justify;width:710px;
+}
+input, select, textarea{background:#FFF url('../imgs/bg-input.png') repeat-x bottom;border:1px solid #d3521f;}
+.erreur input,.erreur  select{background-image:url('../imgs/bg-input-erreur.png');border:1px solid #d3521f;}
+.erreur  textarea{ background:#f36e28;border:1px solid #d3521f;}
+input, select{height:20px;}
+input[type=submit],
+input[type=button],
+a.submit,
+a.button{text-shadow:0px 2px 1px #d3521f;padding:9px 10px;height:35px;color:#FFF;text-transform:uppercase;font:normal 600 0.95em/1 Arial,Verdana;border:1px solid #d3521f;background:#f36e28;cursor:pointer;height:35px;border-radius:6px;-moz-border-radius:6px;-webkit-border-radius:6px;}
+a.submit,
+a.button{line-height:2;}
+input[type=submit]:hover,
+input[type=button]:hover,
+a.submit:hover,
+a.button:hover{text-decoration:none;background:#ba4c21;}
+
+center {width:640px;margin:0 auto;padding:60px 20px 20px;}
+
